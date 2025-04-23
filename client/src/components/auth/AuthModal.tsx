@@ -208,7 +208,7 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
         
         toast({
           title: "Login Successful",
-          description: "Welcome back to Farm2Market! Check out Products or Market pages in the navigation menu.",
+          description: "Welcome back to MerkatoNet! Check out Products or Market pages in the navigation menu.",
         });
         
         handleClose();
@@ -263,7 +263,7 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
         
         toast({
           title: "Registration Successful",
-          description: "Welcome to Farm2Market Ethiopia! Visit the Products or Market pages to see agricultural listings.",
+          description: "Welcome to MerkatoNet Ethiopia! Visit the Products or Market pages to see agricultural listings.",
         });
         
         handleClose();

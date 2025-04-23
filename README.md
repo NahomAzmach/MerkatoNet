@@ -1,6 +1,6 @@
-# Farm2Market Ethiopia
+# MerkatoNet Ethiopia
 
-Farm2Market is an agricultural market connection platform that connects Ethiopian farmers and buyers. The platform features real-time market prices, product listings, and SMS notification capabilities.
+MerkatoNet is an agricultural market connection platform that connects Ethiopian farmers and buyers, named after Africa's largest open market (Merkato in Addis Ababa). The platform features real-time market prices, product listings, and SMS notification capabilities.
 
 ## Features
 
@@ -49,8 +49,8 @@ TWILIO_PHONE_NUMBER=your_twilio_phone_number
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/farm2market-ethiopia.git
-   cd farm2market-ethiopia
+   git clone https://github.com/yourusername/merkato-net-ethiopia.git
+   cd merkato-net-ethiopia
    ```
 
 2. Install dependencies:

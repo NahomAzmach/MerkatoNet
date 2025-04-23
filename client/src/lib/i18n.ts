@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 // English translations
 const enTranslations = {
   common: {
-    appName: 'Farm2Market',
+    appName: 'MerkatoNet',
     login: 'Login',
     register: 'Register',
     logout: 'Logout',
@@ -67,7 +67,7 @@ const enTranslations = {
     verified: 'Verified',
   },
   features: {
-    title: 'How Farm2Market Works',
+    title: 'How MerkatoNet Works',
     subtitle: 'Connecting farmers directly with buyers to improve market access and get better prices',
     feature1Title: 'List Your Products',
     feature1Desc: 'Farmers can easily list their teff with details on quality, quantity, and location for buyers to discover.',
@@ -94,14 +94,14 @@ const enTranslations = {
     weatherUpdates: 'Weather Updates',
     smsCommands: 'SMS Commands',
     faqs: 'FAQs',
-    copyright: '© 2023 Farm2Market Ethiopia. All rights reserved.',
+    copyright: '© 2023 MerkatoNet Ethiopia. All rights reserved.',
   },
 };
 
 // Amharic translations
 const amTranslations = {
   common: {
-    appName: 'ፋርም2ማርኬት',
+    appName: 'መርካቶኔት',
     login: 'ግባ',
     register: 'ይመዝገቡ',
     logout: 'ውጣ',
