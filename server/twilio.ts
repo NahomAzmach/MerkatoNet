@@ -118,13 +118,13 @@ class TwilioServiceImpl implements TwilioService {
                   'Mixed: 5,950 ETB/quintal\n' +
                   'Red (Sergegna): 5,300 ETB/quintal';
       } else if (message === 'stop') {
-        response = 'You have been unsubscribed from all Farm2Market alerts. Reply START to resubscribe.';
+        response = 'You have been unsubscribed from all MerkatoNet alerts. Reply START to resubscribe.';
         // In a real implementation, you would update the database to unsubscribe the user
       } else if (message === 'start') {
-        response = 'You have been resubscribed to Farm2Market alerts. Reply STOP to unsubscribe at any time.';
+        response = 'You have been resubscribed to MerkatoNet alerts. Reply STOP to unsubscribe at any time.';
         // In a real implementation, you would update the database to resubscribe the user
       } else if (message === 'help') {
-        response = 'Farm2Market SMS commands:\n' +
+        response = 'MerkatoNet SMS commands:\n' +
                   'PRICE - Get current teff prices\n' +
                   'STOP - Unsubscribe from alerts\n' +
                   'START - Resubscribe to alerts\n' +

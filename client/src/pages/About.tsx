@@ -21,7 +21,7 @@ const About = () => {
       <section className="relative bg-gradient-to-r from-primary to-primary-dark text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h1 className="font-heading text-4xl md:text-5xl font-bold mb-4">
-            About Farm2Market
+            About MerkatoNet
           </h1>
           <p className="text-lg max-w-2xl mx-auto">
             Connecting Ethiopian farmers directly with buyers to improve market access and ensure fair prices
@@ -37,7 +37,7 @@ const About = () => {
                 Our Mission
               </h2>
               <p className="text-neutral-dark/80 mb-4">
-                Farm2Market was created to solve a critical problem in Ethiopia's agricultural economy: the disconnect between small-scale farmers and potential buyers.
+                MerkatoNet was created to solve a critical problem in Ethiopia's agricultural economy: the disconnect between small-scale farmers and potential buyers.
               </p>
               <p className="text-neutral-dark/80 mb-4">
                 By providing a direct connection between farmers and buyers, we eliminate unnecessary middlemen, allowing farmers to receive fair prices for their produce while giving buyers access to fresher, more affordable goods.
@@ -64,7 +64,7 @@ const About = () => {
               How We Help
             </h2>
             <p className="text-neutral-dark/80 max-w-2xl mx-auto">
-              Farm2Market addresses several key challenges in the Ethiopian agricultural market
+              MerkatoNet addresses several key challenges in the Ethiopian agricultural market
             </p>
           </div>
           
@@ -136,9 +136,9 @@ const About = () => {
               </AccordionItem>
               
               <AccordionItem value="item-3">
-                <AccordionTrigger>Is there a fee to use Farm2Market?</AccordionTrigger>
+                <AccordionTrigger>Is there a fee to use MerkatoNet?</AccordionTrigger>
                 <AccordionContent>
-                  Basic usage of Farm2Market is free for both farmers and buyers. We aim to keep the platform accessible to all. In the future, we may introduce premium features for enhanced visibility and marketing.
+                  Basic usage of MerkatoNet is free for both farmers and buyers. We aim to keep the platform accessible to all. In the future, we may introduce premium features for enhanced visibility and marketing.
                 </AccordionContent>
               </AccordionItem>
               
@@ -172,7 +172,7 @@ const About = () => {
           <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
             <div className="flex items-center">
               <MessageSquare className="h-6 w-6 mr-2" />
-              <span>info@farm2market.et</span>
+              <span>info@merkatonet.et</span>
             </div>
             <div className="flex items-center">
               <MessageSquare className="h-6 w-6 mr-2" />
