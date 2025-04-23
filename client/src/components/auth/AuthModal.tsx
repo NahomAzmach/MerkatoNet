@@ -161,11 +161,47 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // This would connect to Firebase Authentication in a real app
-    toast({
-      title: "Login Functionality",
-      description: "Please use SMS verification or Google sign-in for now",
-    });
+    try {
+      setIsSubmitting(true);
+      // Mock authentication for demo purposes
+      const userObj = {
+        uid: "demo-user-id",
+        displayName: "Demo User",
+        email: formData.phone + "@demo.com",
+        phoneNumber: formData.phone,
+        photoURL: "https://randomuser.me/api/portraits/people/1.jpg",
+      };
+      
+      // Set the user in context to simulate login
+      setTimeout(() => {
+        // In a real app, this would be set by Firebase auth
+        // Here we're just updating the UI for demo purposes
+        auth.updateProfile({
+          uid: userObj.uid,
+          userType: "buyer",
+          displayName: userObj.displayName,
+          email: userObj.email,
+          phoneNumber: userObj.phoneNumber,
+          photoURL: userObj.photoURL,
+        });
+        
+        toast({
+          title: "Login Successful",
+          description: "Welcome back to Farm2Market!",
+        });
+        
+        handleClose();
+      }, 1000);
+    } catch (error: any) {
+      console.error("Login error:", error);
+      toast({
+        title: "Login Failed",
+        description: error.message || "Failed to log in",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   const handleRegisterSubmit = async (e: React.FormEvent) => {
@@ -180,11 +216,47 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
       return;
     }
     
-    // This would connect to Firebase Authentication in a real app
-    toast({
-      title: "Registration Functionality",
-      description: "Please use SMS verification or Google sign-in for now",
-    });
+    try {
+      setIsSubmitting(true);
+      
+      // Mock registration for demo purposes
+      const userObj = {
+        uid: "demo-user-" + Date.now(),
+        displayName: `${formData.firstName} ${formData.lastName}`,
+        email: formData.phone + "@demo.com",
+        phoneNumber: formData.phone,
+        photoURL: "https://randomuser.me/api/portraits/people/2.jpg",
+      };
+      
+      // Simulate API call delay
+      setTimeout(() => {
+        // Update auth context
+        auth.updateProfile({
+          uid: userObj.uid,
+          userType: userType,
+          displayName: userObj.displayName,
+          email: userObj.email,
+          phoneNumber: userObj.phoneNumber,
+          photoURL: userObj.photoURL,
+        });
+        
+        toast({
+          title: "Registration Successful",
+          description: "Welcome to Farm2Market Ethiopia!",
+        });
+        
+        handleClose();
+      }, 1000);
+    } catch (error: any) {
+      console.error("Registration error:", error);
+      toast({
+        title: "Registration Failed",
+        description: error.message || "Failed to register",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {

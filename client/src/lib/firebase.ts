@@ -32,6 +32,9 @@ const db = getDatabase(app);
 
 // Auth Providers
 const googleProvider = new GoogleAuthProvider();
+// Add scopes for Google provider
+googleProvider.addScope('https://www.googleapis.com/auth/userinfo.email');
+googleProvider.addScope('https://www.googleapis.com/auth/userinfo.profile');
 const phoneProvider = new PhoneAuthProvider(auth);
 
 // Handle redirect result
@@ -49,8 +52,15 @@ export const handleAuthRedirect = async () => {
 };
 
 // Sign in with Google
-export const signInWithGoogle = () => {
-  return signInWithPopup(auth, googleProvider);
+export const signInWithGoogle = async () => {
+  try {
+    // Log the attempted authentication
+    console.log("Attempting Google sign-in");
+    return await signInWithPopup(auth, googleProvider);
+  } catch (error) {
+    console.error("Detailed Google sign-in error:", error);
+    throw error;
+  }
 };
 
 // Sign in with Google (redirect)
