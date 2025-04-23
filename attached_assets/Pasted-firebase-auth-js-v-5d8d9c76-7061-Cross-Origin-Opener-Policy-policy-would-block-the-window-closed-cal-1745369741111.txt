@@ -1,0 +1,51 @@
+firebase_auth.js?v=5d8d9c76:7061 Cross-Origin-Opener-Policy policy would block the window.closed call.
+poll @ firebase_auth.js?v=5d8d9c76:7061Understand this error
+firebase_auth.js?v=5d8d9c76:7061 Cross-Origin-Opener-Policy policy would block the window.closed call.
+poll @ firebase_auth.js?v=5d8d9c76:7061Understand this error
+firebase_auth.js?v=5d8d9c76:7061 Cross-Origin-Opener-Policy policy would block the window.closed call.
+poll @ firebase_auth.js?v=5d8d9c76:7061Understand this error
+firebase_auth.js?v=5d8d9c76:7061 Cross-Origin-Opener-Policy policy would block the window.closed call.
+poll @ firebase_auth.js?v=5d8d9c76:7061Understand this error
+firebase_auth.js?v=5d8d9c76:7061 Cross-Origin-Opener-Policy policy would block the window.closed call.
+poll @ firebase_auth.js?v=5d8d9c76:7061Understand this error
+hook.js:608 [2025-04-23T00:54:21.291Z]  @firebase/database: FIREBASE WARNING: Firebase error. Please ensure that you have the URL of your Firebase Realtime Database instance configured correctly. (https://rental-property-cf722-default-rtdb.firebaseio.com/) 
+overrideMethod @ hook.js:608Understand this warning
+2hook.js:608 Warning: Missing `Description` or `aria-describedby={undefined}` for {DialogContent}. Error Component Stack
+    at DescriptionWarning (@radix-ui_react-dialog.js?v=5d8d9c76:330:29)
+    at @radix-ui_react-dialog.js?v=5d8d9c76:234:13
+    at @radix-ui_react-dialog.js?v=5d8d9c76:157:58
+    at Presence (chunk-MKNQX24V.js?v=5d8d9c76:24:11)
+    at @radix-ui_react-dialog.js?v=5d8d9c76:148:64
+    at chunk-5S42QOQO.js?v=5d8d9c76:79:13
+    at chunk-5S42QOQO.js?v=5d8d9c76:56:13
+    at chunk-GVTGVYSA.js?v=5d8d9c76:42:13
+    at chunk-3KZ3IHOR.js?v=5d8d9c76:258:22
+    at Presence (chunk-MKNQX24V.js?v=5d8d9c76:24:11)
+    at Provider (chunk-MAE4WKEQ.js?v=5d8d9c76:38:15)
+    at DialogPortal (@radix-ui_react-dialog.js?v=5d8d9c76:110:11)
+    at _c3 (dialog.tsx:35:6)
+    at Provider (chunk-MAE4WKEQ.js?v=5d8d9c76:38:15)
+    at Dialog (@radix-ui_react-dialog.js?v=5d8d9c76:51:5)
+    at AuthModal (AuthModal.tsx:30:22)
+    at section (<anonymous>)
+    at Hero (Hero.tsx:10:17)
+    at div (<anonymous>)
+    at Home (Home.tsx:8:58)
+    at Route (wouter.js?v=5d8d9c76:323:16)
+    at Switch (wouter.js?v=5d8d9c76:379:17)
+    at Router (<anonymous>)
+    at main (<anonymous>)
+    at div (<anonymous>)
+    at Provider (chunk-MAE4WKEQ.js?v=5d8d9c76:38:15)
+    at TooltipProvider (@radix-ui_react-tooltip.js?v=5d8d9c76:59:5)
+    at App (App.tsx:29:3)
+    at AuthProvider (AuthContext.tsx:40:32)
+    at I18nextProvider (react-i18next.js?v=5d8d9c76:781:3)
+    at QueryClientProvider (@tanstack_react-query.js?v=5d8d9c76:2805:3)
+overrideMethod @ hook.js:608Understand this warning
+
+                
+          
+          
+          
+         Chrome is moving towards a new experience that allows users to choose to browse without third-party cookies.

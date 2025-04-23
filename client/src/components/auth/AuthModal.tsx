@@ -148,11 +148,32 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
       handleClose();
     } catch (error: any) {
       console.error("Google sign in error:", error);
+      
+      let errorMessage;
+      
+      if (error.code === "auth/unauthorized-domain") {
+        errorMessage = "This domain is not authorized in Firebase. Please add your Replit domain to the authorized domains list in Firebase console.";
+      } else if (error.code === "auth/configuration-not-found") {
+        errorMessage = "Firebase authentication is not properly configured. Please check your Firebase project setup.";
+      } else {
+        errorMessage = error.message || "Failed to sign in with Google";
+      }
+      
       toast({
         title: "Authentication Error",
-        description: error.message || "Failed to sign in with Google",
+        description: errorMessage,
         variant: "destructive"
       });
+      
+      // If Firebase auth fails, suggest using the local auth method
+      if (error.code === "auth/unauthorized-domain" || error.code === "auth/configuration-not-found") {
+        setTimeout(() => {
+          toast({
+            title: "Local Authentication Available",
+            description: "You can use the phone/password form to log in while Firebase is being configured",
+          });
+        }, 1000);
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -282,6 +303,9 @@ const AuthModal = ({ onClose }: AuthModalProps) => {
               : t('common.register') + " " + t('common.appName')
             }
           </DialogTitle>
+          <DialogDescription className="sr-only">
+            Sign in or create an account
+          </DialogDescription>
           <Button variant="ghost" className="text-white h-8 w-8 p-0" onClick={handleClose}>
             <X size={20} />
           </Button>
