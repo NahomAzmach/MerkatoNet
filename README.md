@@ -1,6 +1,6 @@
 # MerkatoNet Ethiopia
 
-MerkatoNet is an agricultural market connection platform that connects Ethiopian farmers and buyers, named after Africa's largest open market (Merkato in Addis Ababa). The platform features real-time market prices, product listings, and SMS notification capabilities.
+MerkatoNet is an agricultural market connection platform that connects Ethiopian farmers and buyers. The platform features real-time market prices, product listings, and SMS notification capabilities.
 
 ## Features
 
@@ -27,7 +27,6 @@ MerkatoNet is an agricultural market connection platform that connects Ethiopian
 
 - Node.js 18+
 - npm or yarn
-- Replit account (for deployment)
 
 ### Environment Setup
 
@@ -49,8 +48,8 @@ TWILIO_PHONE_NUMBER=your_twilio_phone_number
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/merkato-net-ethiopia.git
-   cd merkato-net-ethiopia
+   git clone https://github.com/yourusername/MerkatoNet-ethiopia.git
+   cd MerkatoNet-ethiopia
    ```
 
 2. Install dependencies:
@@ -65,24 +64,6 @@ TWILIO_PHONE_NUMBER=your_twilio_phone_number
 
 4. Open your browser and navigate to `http://localhost:5000`
 
-## Firebase Setup
-
-To configure Firebase authentication:
-
-1. Create a Firebase project at [firebase.google.com](https://console.firebase.google.com/)
-2. Enable Authentication and select Google as a sign-in method
-3. Add your development domain to the authorized domains list
-4. Get your Firebase configuration (API Key, App ID, and Project ID)
-5. Add these values to your environment variables
-
-## Twilio Setup (Optional)
-
-For SMS functionality:
-
-1. Create a Twilio account at [twilio.com](https://www.twilio.com/)
-2. Get a Twilio phone number
-3. Find your Account SID and Auth Token from the Twilio dashboard
-4. Add these values to your environment variables
 
 ## Project Structure
 
@@ -114,18 +95,6 @@ For SMS functionality:
 ## Deployment
 
 The application is configured for deployment on Replit.
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Acknowledgments
 
