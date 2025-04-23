@@ -1,6 +1,56 @@
-node_modules
-dist
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+yarn-debug.log
+.pnpm-debug.log
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build directories
+/dist
+/build
+.next/
+
+# Cache
+.cache/
+.parcel-cache/
+
+# Coverage
+coverage/
+
+# Logs
+logs
+*.log
+
+# System Files
 .DS_Store
-server/public
-vite.config.ts.*
-*.tar.gz
+Thumbs.db
+
+# Editor specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Package manager lock files (keep for reproducible builds, remove if you want)
+# package-lock.json
+# yarn.lock
+
+# Optional: Replit specific files
+.replit
+.replit.nix
+.config/
+
+# Database
+*.sqlite
+*.sqlite3
+*.db
+
+# Generated files
+.drizzle/
