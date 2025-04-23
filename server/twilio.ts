@@ -35,8 +35,11 @@ class TwilioServiceImpl implements TwilioService {
   }
 
   async sendSms(to: string, message: string): Promise<{ sid: string }> {
+    // Clean the phone number - remove spaces and other non-numeric characters except the leading +
+    const cleanedPhoneNumber = to.replace(/\s+/g, '');
+    
     // Validate phone number (basic validation)
-    if (!to.match(/^\+\d{8,15}$/)) {
+    if (!cleanedPhoneNumber.match(/^\+\d{8,15}$/)) {
       throw new Error('Invalid phone number format. Must include country code (e.g., +251...)');
     }
     
@@ -50,14 +53,14 @@ class TwilioServiceImpl implements TwilioService {
         const result = await this.twilioClient.messages.create({
           body: message,
           from: this.phoneNumber,
-          to: to
+          to: cleanedPhoneNumber
         });
         
         console.log(`SMS sent to ${to}, SID: ${result.sid}`);
         return { sid: result.sid };
-      } catch (error) {
+      } catch (error: any) {
         console.error('Error sending SMS via Twilio:', error);
-        throw new Error(`Failed to send SMS: ${error.message}`);
+        throw new Error(`Failed to send SMS: ${error.message || 'Unknown error'}`);
       }
     } else {
       // Mock successful SMS delivery

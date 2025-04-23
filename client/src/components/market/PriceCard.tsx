@@ -4,7 +4,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogFooter } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { History, Share, MessageSquare } from "lucide-react";
@@ -30,11 +30,27 @@ const PriceCard = ({ prices, lastUpdated, isLoading }: PriceCardProps) => {
   const [phoneNumber, setPhoneNumber] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Function to validate phone number format
+  const validatePhoneNumber = (phone: string): boolean => {
+    // Basic validation for international format with + and country code
+    return /^\+\d{1,4}\s?\d+$/.test(phone);
+  };
+
   const handleSmsSubscribe = async () => {
     if (!phoneNumber) {
       toast({
         title: "Phone Number Required",
         description: "Please enter a valid phone number to receive SMS alerts",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Validate phone number format
+    if (!validatePhoneNumber(phoneNumber)) {
+      toast({
+        title: "Invalid Phone Number",
+        description: "Please enter a phone number with country code (e.g., +251 91 234 5678)",
         variant: "destructive"
       });
       return;
@@ -144,6 +160,9 @@ const PriceCard = ({ prices, lastUpdated, isLoading }: PriceCardProps) => {
         <DialogContent className="sm:max-w-[425px]">
           <DialogHeader>
             <DialogTitle>Subscribe to SMS Price Alerts</DialogTitle>
+            <DialogDescription>
+              Get real-time price updates via SMS
+            </DialogDescription>
           </DialogHeader>
           <div className="py-4">
             <div className="space-y-4">
