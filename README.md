@@ -1,6 +1,6 @@
 # MerkatoNet Ethiopia
 
-[MerkatoNet Website] (https://merkatoNet.xyz)
+[MerkatoNet Website](https://merkatoNet.xyz)
 
 MerkatoNet is an agricultural market connection platform that connects Ethiopian farmers and buyers. The platform features real-time market prices, product listings, and SMS notification capabilities.
 
